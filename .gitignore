@@ -109,6 +109,7 @@
 /talks
 /var
 /work
+/code
 
 *.elc
 *~
