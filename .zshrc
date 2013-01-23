@@ -25,7 +25,7 @@ export HISTFILE="$HOME/.history"
 export SAVEHIST=$HISTSIZE
 
 # Use vim as the editor
-export EDITOR=vi
+export EDITOR=emacs
 # GNU Screen sets -o vi if EDITOR=vi, so we have to force it back.
 set -o emacs
 
@@ -47,17 +47,6 @@ alias t="script/test $*"
 alias f="script/features $*"
 function mcd() { mkdir -p $1 && cd $1 }
 function cdf() { cd *$1*/ } # stolen from @topfunky
-function das() {
-    cd ~/proj/destroyallsoftware.com/destroyallsoftware.com
-    pwd
-    export RUBY_HEAP_MIN_SLOTS=1000000
-    export RUBY_HEAP_SLOTS_INCREMENT=1000000
-    export RUBY_HEAP_SLOTS_GROWTH_FACTOR=1
-    export RUBY_GC_MALLOC_LIMIT=1000000000
-    export RUBY_HEAP_FREE_MIN=500000
-    . /Volumes/misc/filing/business/destroy\ all\ software\ llc/s3.sh
-    . /Volumes/misc/filing/business/destroy\ all\ software\ llc/braintree.sh
-}
 
 # Activate the closest virtualenv by looking in parent directories.
 activate_virtualenv() {
@@ -100,6 +89,10 @@ function up()
 }
 
 # Initialize RVM
-PATH=$PATH:$HOME/.rvm/bin
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
+# PATH=$PATH:$HOME/.rvm/bin
+# [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
 
+# rbenv
+export SHELL=`which zsh` zsh
+eval "$(rbenv init -)"
+export GTAGSLABEL=rtags
