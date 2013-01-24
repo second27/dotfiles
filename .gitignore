@@ -111,6 +111,7 @@
 /work
 /code
 /.rbenv
+/backup
 
 *.elc
 *~
