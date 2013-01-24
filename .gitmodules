@@ -29,6 +29,3 @@
 [submodule ".vim/bundle/vim-matchit"]
 	path = .vim/bundle/vim-matchit
 	url = https://github.com/tsaleh/vim-matchit.git
-[submodule ".emacs.d"]
-	path = .emacs.d
-	url = git@github.com:rushcut/dotfiles-1.git
