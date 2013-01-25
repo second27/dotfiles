@@ -113,6 +113,7 @@
 /.rbenv
 /backup
 /.recentf
+/tmp
 
 *.elc
 *~
