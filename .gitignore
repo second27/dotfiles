@@ -120,3 +120,4 @@
 *.orig
 *.rej
 *.pyc
+/.ido.last

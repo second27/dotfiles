@@ -13,7 +13,7 @@ export PATH=/usr/local/sbin:/usr/local/bin:${PATH}
 export PATH="$HOME/bin:$PATH"
 
 # Colorize terminal
-export TERM='xterm-color'
+export TERM='xterm-256color'
 alias ls='ls -G'
 alias ll='ls -lG'
 export LSCOLORS="ExGxBxDxCxEgEdxbxgxcxd"
@@ -50,18 +50,18 @@ function cdf() { cd *$1*/ } # stolen from @topfunky
 
 # Activate the closest virtualenv by looking in parent directories.
 activate_virtualenv() {
-    if [ -f env/bin/activate ]; then . env/bin/activate;
-    elif [ -f ../env/bin/activate ]; then . ../env/bin/activate;
-    elif [ -f ../../env/bin/activate ]; then . ../../env/bin/activate;
-    elif [ -f ../../../env/bin/activate ]; then . ../../../env/bin/activate;
-    fi
+		if [ -f env/bin/activate ]; then . env/bin/activate;
+		elif [ -f ../env/bin/activate ]; then . ../env/bin/activate;
+		elif [ -f ../../env/bin/activate ]; then . ../../env/bin/activate;
+		elif [ -f ../../../env/bin/activate ]; then . ../../../env/bin/activate;
+		fi
 }
 
 # Find the directory of the named Python module.
 python_module_dir () {
-    echo "$(python -c "import os.path as _, ${1}; \
-        print _.dirname(_.realpath(${1}.__file__[:-1]))"
-        )"
+		echo "$(python -c "import os.path as _, ${1}; \
+				print _.dirname(_.realpath(${1}.__file__[:-1]))"
+				)"
 }
 
 # By @ieure; copied from https://gist.github.com/1474072
@@ -80,12 +80,12 @@ python_module_dir () {
 #
 function up()
 {
-    local DIR=$PWD
-    local TARGET=$1
-    while [ ! -e $DIR/$TARGET -a $DIR != "/" ]; do
-        DIR=$(dirname $DIR)
-    done
-    test $DIR != "/" && echo $DIR/$TARGET
+		local DIR=$PWD
+		local TARGET=$1
+		while [ ! -e $DIR/$TARGET -a $DIR != "/" ]; do
+				DIR=$(dirname $DIR)
+		done
+		test $DIR != "/" && echo $DIR/$TARGET
 }
 
 # Initialize RVM
