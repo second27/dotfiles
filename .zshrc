@@ -89,11 +89,11 @@ function up()
 }
 
 # Initialize RVM
-# PATH=$PATH:$HOME/.rvm/bin
-# [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
+PATH=$PATH:$HOME/.rvm/bin
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
 
 # rbenv
-export PATH="$HOME/.rbenv/bin:$PATH"
-export SHELL=`which zsh` zsh
-eval "$(rbenv init -)"
-export GTAGSLABEL=rtags
+# export PATH="$HOME/.rbenv/bin:$PATH"
+# export SHELL=`which zsh` zsh
+# eval "$(rbenv init -)"
+# export GTAGSLABEL=rtags

@@ -114,6 +114,9 @@
 /backup
 /.recentf
 /tmp
+/Cloud
+/.local
+/Machines
 
 *.elc
 *~
