@@ -1,3 +1,5 @@
+export LANG=ko_KR.UTF-8
+
 # Set custom prompt
 setopt PROMPT_SUBST
 autoload -U promptinit
