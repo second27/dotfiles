@@ -1,0 +1,3 @@
+#!/bin/bash
+brew install autoconf automake libtool pkg-config openssl readline libyaml sqlite libxml2 libxslt libksba
+curl https://raw.github.com/wayneeseguin/rvm/master/binscripts/rvm-installer | bash -s stable

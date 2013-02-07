@@ -1,0 +1,33 @@
+#!/usr/bin/env ruby
+
+words = ARGV
+
+words.map! {|w| w.split(" ") }
+words.flatten!
+words.uniq!
+
+filenames = Dir.glob("/Users/gil/src/**/*_spec.rb")
+
+descriptions = []
+filenames.each do |filename|
+	file = File.open(filename, "r")
+	while line = file.gets
+		if line =~ /[(it)|(describe)] ['"](.*)["'] do/
+			descriptions << $1
+		end
+	end
+end
+
+result = []
+descriptions.each do |desc|
+	capture = true
+	words.each do |word|
+		unless desc.downcase.include? word.downcase
+			capture = false
+			break
+		end
+	end
+	result << desc if capture
+end
+
+puts result
