@@ -8,6 +8,10 @@ pattern = pattern.gsub("<tn>", "([0-9]+)")
 pattern = pattern.gsub("<ti>", "(.*)")
 filenames = Dir.glob("*.mp3").map {|name| File.basename name }
 
+puts "============================================================"
+p pattern
+puts "============================================================"
+
 Dir.glob("*.mp3").each do |filename|
   tag = TagLib::FileRef.open(filename) do |ref|
     File.basename(filename).scan(/#{pattern}/) do |matched|
@@ -15,6 +19,8 @@ Dir.glob("*.mp3").each do |filename|
       ref.tag.title = matched[1]
       ref.save
     end
+    puts "============================================================"
+    puts "#{filename}"
+    puts "set #{ref.tag.track}, set #{ref.tag.title}"
   end
-  puts filename
 end

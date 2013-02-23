@@ -18,6 +18,7 @@ export PATH="$HOME/bin:$PATH"
 export TERM='xterm-256color'
 alias ls='ls -G'
 alias ll='ls -lG'
+alias ea="/Applications/Emacs.app/Contents/MacOS/Emacs"
 export LSCOLORS="ExGxBxDxCxEgEdxbxgxcxd"
 export GREP_OPTIONS="--color"
 
