@@ -1,6 +1,6 @@
 export LANG=ko_KR.UTF-8
 
-# Set custom prompt
+set custom prompt
 setopt PROMPT_SUBST
 autoload -U promptinit
 promptinit
@@ -90,6 +90,9 @@ function up()
 		done
 		test $DIR != "/" && echo $DIR/$TARGET
 }
+
+export NODE_PATH=/usr/local/lib/node_modules
+export NODE_NO_READLINE=1
 
 # Initialize RVM
 PATH=$PATH:$HOME/.rvm/bin
