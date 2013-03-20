@@ -16,6 +16,10 @@ export PATH="$HOME/bin:$PATH"
 
 # Colorize terminal
 export TERM='xterm-256color'
+alias npm='env NODE_NO_READLINE=1 npm'
+alias coffee='env NODE_NO_READLINE=1 coffee'
+alias rm='trash'
+alias cof='coffee'
 alias ls='ls -G'
 alias ll='ls -lG'
 alias ea="/Applications/Emacs.app/Contents/MacOS/Emacs"
