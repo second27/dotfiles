@@ -24,7 +24,6 @@ alias ls='ls -G'
 alias ll='ls -lG'
 alias ea="/Applications/Emacs.app/Contents/MacOS/Emacs"
 alias em="/Applications/Emacs.app/Contents/MacOS/Emacs -nw"
-alias emacs="/Applications/Emacs.app/Contents/MacOS/Emacs -nw"
 export LSCOLORS="ExGxBxDxCxEgEdxbxgxcxd"
 export GREP_OPTIONS="--color"
 
